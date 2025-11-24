@@ -10,7 +10,7 @@ export class AuthService {
 	) {}
 
 	validateUser(username: string, pass: string) {
-		const user = this.userService.findOne(username);
+		const user = this.userService.findUserName(username);
 		if (user?.password === pass) {
 			const { password, ...result } = user;
 			return result;

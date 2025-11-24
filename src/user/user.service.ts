@@ -21,7 +21,11 @@ export class UserService {
 		},
 	];
 
-	findOne(username: string): User | undefined {
+	findUserName(username: string): User | undefined {
 		return this.users.find((user) => user.username === username);
+	}
+
+	findUserId(userId: number): User | undefined {
+		return this.users.find((user) => user.userId === userId);
 	}
 }
